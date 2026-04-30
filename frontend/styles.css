@@ -1,0 +1,144 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f3f4f6;
+  --muted: #d1d5db;
+  --primary: #60a5fa;
+  --border: #374151;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 1rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-grid,
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.4rem 0 0;
+}
+
+.inline-form,
+.grid-form {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.grid-form input {
+  min-width: 170px;
+}
+
+input,
+button {
+  padding: 0.65rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+input {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #4b5563;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.danger {
+  color: #fff;
+  background: var(--danger);
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.alert {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  padding: 0.7rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+.hidden {
+  display: none;
+}
